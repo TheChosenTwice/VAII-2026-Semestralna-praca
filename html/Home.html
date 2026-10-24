@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum - Home</title>
+    <link rel="stylesheet" href="mainLayoutStyle.css">
+    <link rel="stylesheet" href="homeStyle.css">
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="Home.html" class="brand" aria-label="Home">
+                <img src="logo.png" alt="Forum logo" class="logo">
+                <span class="brand-text">Discussion Forum</span>
+            </a>
+            <div class="quick-links">
+                <a href="Home.html">Home</a>
+                <a href="#">Discussions</a>
+                <a href="#">Categories</a>
+            </div>
+        </div>
+        <a href="#" class="login-link">Login</a>
+    </nav>
+</header>
+
+<main class="home-content">
+    <div class="home-panel-column">
+        <h1 class="panel-heading">Discussions</h1>
+        <p class="panel-description panel-description-outside">Ask questions, share ideas, and join the conversation</p>
+        <div class="home-main-row">
+            <section class="discussions-panel" aria-label="Discussions panel">
+                <p class="panel-label">BROWSE</p>
+                <div class="panel-actions">
+                    <button type="button">All discussions</button>
+                    <button type="button">Popular</button>
+                    <button type="button">Unanswered</button>
+                </div>
+                <p class="panel-label">CATEGORIES</p>
+                <nav class="panel-categories" aria-label="Discussion categories">
+                    <a href="#"># General</a>
+                    <a href="#"># Help</a>
+                    <a href="#"># Announcements</a>
+                    <a href="#"># Feedback</a>
+                    <a href="#"># Off Topic</a>
+                </nav>
+                <p class="panel-note-title">A space for everyone</p>
+                <p class="panel-note-text">Be curious, stay respectful, and<br>keep the conversation helpful.</p>
+                <a href="#" class="community-guidelines-link">Community guidelines</a>
+            </section>
+
+            <div class="discussions-content">
+                <div class="discussions-search" aria-label="Search discussions">
+                    <label class="visually-hidden" for="discussion-search">Search discussions</label>
+                    <div class="search-input-wrap">
+                        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="2"></circle>
+                            <line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                        </svg>
+                        <input id="discussion-search" type="text" placeholder="Search discussions">
+                    </div>
+                    <button type="button" class="latest-activity-btn" aria-label="Sort by latest activity">
+                        <svg class="sort-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M7 5v13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M4 15l3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M17 19V6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M14 9l3-3 3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span>Latest activity</span>
+                    </button>
+                </div>
+
+                <section class="discussion-list" aria-label="Discussion list">
+                    <div class="discussion-list-head">
+                        <div class="discussion-list-title-wrap">
+                            <h2>Discussion list</h2>
+                            <span class="discussion-total">128</span>
+                        </div>
+                        <div class="discussion-columns">
+                            <span>Replies</span>
+                            <span>Views</span>
+                            <span>Activity</span>
+                        </div>
+                    </div>
+
+                    <article class="discussion-row">
+                        <div class="discussion-main">
+                            <span class="discussion-avatar">DF</span>
+                            <div class="discussion-text">
+                                <a href="#" class="discussion-link">Welcome to the community</a>
+                                <p>Announcements · Forum team</p>
+                            </div>
+                        </div>
+                        <div class="discussion-stats"><span>12</span><span>1.2k</span><span>15 min ago</span></div>
+                    </article>
+
+                    <article class="discussion-row">
+                        <div class="discussion-main">
+                            <span class="discussion-avatar">AM</span>
+                            <div class="discussion-text">
+                                <a href="#" class="discussion-link">Introduce yourself to the community</a>
+                                <p>General · Alex Morgan</p>
+                            </div>
+                        </div>
+                        <div class="discussion-stats"><span>28</span><span>864</span><span>32 min ago</span></div>
+                    </article>
+
+                    <article class="discussion-row">
+                        <div class="discussion-main">
+                            <span class="discussion-avatar">JL</span>
+                            <div class="discussion-text">
+                                <a href="#" class="discussion-link">What are you working on this week?</a>
+                                <p>General · Jamie Lee</p>
+                            </div>
+                        </div>
+                        <div class="discussion-stats"><span>16</span><span>342</span><span>1 hour ago</span></div>
+                    </article>
+
+                    <article class="discussion-row">
+                        <div class="discussion-main">
+                            <span class="discussion-avatar">TR</span>
+                            <div class="discussion-text">
+                                <a href="#" class="discussion-link">Share a resource you found useful</a>
+                                <p>Resources · Taylor Reed</p>
+                            </div>
+                        </div>
+                        <div class="discussion-stats"><span>9</span><span>218</span><span>2 hours ago</span></div>
+                    </article>
+
+                    <article class="discussion-row">
+                        <div class="discussion-main">
+                            <span class="discussion-avatar">SW</span>
+                            <div class="discussion-text">
+                                <a href="#" class="discussion-link">How do I update my profile?</a>
+                                <p>Questions · Sam Wilson</p>
+                            </div>
+                        </div>
+                        <div class="discussion-stats"><span>4</span><span>96</span><span>3 hours ago</span></div>
+                    </article>
+
+                    <article class="discussion-row">
+                        <div class="discussion-main">
+                            <span class="discussion-avatar">JK</span>
+                            <div class="discussion-text">
+                                <a href="#" class="discussion-link">Ideas for our next community discussion</a>
+                                <p>Feedback · Jordan Kim</p>
+                            </div>
+                        </div>
+                        <div class="discussion-stats"><span>7</span><span>153</span><span>5 hours ago</span></div>
+                    </article>
+
+                    <div class="discussion-list-foot">
+                        <span>Showing 1-6 of 128 discussions</span>
+                        <div class="discussion-pagination" aria-label="Pagination">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">22</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-left">
+        <a href="Home.html" class="footer-brand" aria-label="Home">
+            <img src="logo.png" alt="Forum logo" class="logo">
+            <span class="footer-brand-text">Discussion Forum</span>
+        </a>
+        <p class="footer-copy">&copy; 2026 Discussion Forum. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+        <a href="#">Guidelines</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>

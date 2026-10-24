@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="/mainLayoutStyle (snapshot).css">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/mainLayoutStyle (snapshot).css" />
+              <option name="originalContent" value="body {&#10;    margin: 0;&#10;    font-family: Arial, sans-serif;&#10;}&#10;&#10;.site-header {&#10;    border-bottom: 1px solid #e5e7eb;&#10;    background-color: #ffffff;&#10;}&#10;&#10;.navbar {&#10;    width: 100%;&#10;    margin: 0;&#10;    padding: 12px 16px;&#10;    box-sizing: border-box;&#10;    display: flex;&#10;    align-items: center;&#10;    justify-content: space-between;&#10;    gap: 20px;&#10;}&#10;&#10;.nav-left {&#10;    display: flex;&#10;    align-items: center;&#10;    gap: 20px;&#10;}&#10;&#10;.brand {&#10;    display: inline-flex;&#10;    align-items: center;&#10;}&#10;&#10;.logo {&#10;    width: 50px;&#10;    height: auto;&#10;    display: block;&#10;}&#10;&#10;.quick-links {&#10;    display: flex;&#10;    align-items: center;&#10;    gap: 16px;&#10;}&#10;&#10;.quick-links a,&#10;.login-link {&#10;    color: #1f2937;&#10;    text-decoration: none;&#10;    font-weight: 600;&#10;}&#10;&#10;.quick-links a:hover,&#10;.login-link:hover {&#10;    text-decoration: underline;&#10;}&#10;&#10;.login-link {&#10;    margin-left: 0;&#10;    white-space: nowrap;&#10;}" />
+              <option name="updatedContent" value="body {&#10;    margin: 0;&#10;    font-family: Arial, sans-serif;&#10;}&#10;&#10;.site-header {&#10;    border-bottom: 1px solid #e5e7eb;&#10;    background-color: #ffffff;&#10;}&#10;&#10;.navbar {&#10;    width: 100%;&#10;    margin: 0;&#10;    padding: 12px 16px;&#10;    box-sizing: border-box;&#10;    display: flex;&#10;    align-items: center;&#10;    justify-content: space-between;&#10;    gap: 20px;&#10;}&#10;&#10;.nav-left {&#10;    display: flex;&#10;    align-items: center;&#10;    gap: 32px;&#10;}&#10;&#10;.brand {&#10;    display: inline-flex;&#10;    align-items: center;&#10;    gap: 10px;&#10;    color: #111827;&#10;    text-decoration: none;&#10;}&#10;&#10;.brand-text {&#10;    font-size: 18px;&#10;    font-weight: 700;&#10;    line-height: 1;&#10;}&#10;&#10;.logo {&#10;    width: 50px;&#10;    height: auto;&#10;    display: block;&#10;}&#10;&#10;.quick-links {&#10;    display: flex;&#10;    align-items: center;&#10;    gap: 16px;&#10;}&#10;&#10;.quick-links a,&#10;.login-link {&#10;    color: #1f2937;&#10;    text-decoration: none;&#10;    font-weight: 600;&#10;}&#10;&#10;.quick-links a:hover,&#10;.login-link:hover {&#10;    text-decoration: underline;&#10;}&#10;&#10;.login-link {&#10;    margin-left: 0;&#10;    white-space: nowrap;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
