@@ -1,6 +1,12 @@
 <?php
 
+/** @var \Framework\Auth\AppUser $user */
 /** @var \Framework\Support\LinkGenerator $link */
 ?>
 
-This is the user INDEX page.
+<main class="user-profile-page">
+    <div class="user-profile-picture-bubble">
+        <img src="<?= $link->asset($user->getProfilePicture()) ?>"
+             alt="<?= e($user->getName()) ?>'s profile picture">
+    </div>
+</main>

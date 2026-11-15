@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\Category;
+use App\Models\Topic;
+use App\Models\User;
 use Framework\Core\BaseController;
 use Framework\Http\Request;
 use Framework\Http\Responses\Response;
@@ -39,7 +42,28 @@ class HomeController extends BaseController
      */
     public function index(Request $request): Response
     {
-        return $this->html();
+        $users = [];
+        foreach (User::getAll() as $user) {
+            $topics = $user->getAllRelated(Topic::class, 'user_id');
+            if ($topics === []) {
+                continue;
+            }
+
+            $users[] = [
+                'user' => $user,
+                'topics' => array_map(
+                    static fn(Topic $topic): array => [
+                        'topic' => $topic,
+                        'category' => $topic->getCategoryId() === null
+                            ? null
+                            : $topic->getOneRelated(Category::class, 'category_id'),
+                    ],
+                    $topics
+                ),
+            ];
+        }
+
+        return $this->html(compact('users'));
     }
 
     /**

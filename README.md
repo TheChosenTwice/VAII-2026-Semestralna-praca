@@ -75,5 +75,5 @@ Webová stránka bude umožňovať prezeranie diskusií, registráciu používat
 - Možnosť správcu spravovať používateľské účty.
 
 ### Zdroje
-<a target="_blank" href="https://icons8.com/icon/NsCIoEt5vdsV/study-bunny">Study Bunny</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/NsCIoEt5vdsV/study-bunny">Study Bunny</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>  
 <a target="_blank" href="https://icons8.com/icon/12438/customer">Customer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>

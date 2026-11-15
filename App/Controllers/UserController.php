@@ -76,7 +76,7 @@ class UserController extends BaseController
                 && ($currentPassword === '' || $newPassword === '' || $confirmPassword === '')
             ) {
                 $message = 'Enter your current password, a new password, and its confirmation.';
-            } elseif ($newPassword !== '' && !password_verify($currentPassword, (string)$identity->getPassword())) {
+            } elseif ($newPassword !== '' && !password_verify($currentPassword, (string)$identity->getPasswordHash())) {
                 $message = 'Current password is incorrect.';
             } elseif ($newPassword !== '' && strlen($newPassword) < 6) {
                 $message = 'New password must be at least 6 characters long.';

@@ -29,7 +29,7 @@ class User extends Model implements IIdentity
         $this->login = $login;
     }
 
-    public function getPassword(): ?string
+    public function getPasswordHash(): ?string
     {
         return $this->password;
     }
@@ -57,6 +57,12 @@ class User extends Model implements IIdentity
     public function getProfilePicture(): ?string
     {
         if ($this->profile_picture === null || $this->profile_picture === 'default_pfp.png') {
+            return '/images/default_pfp.png';
+        }
+
+        $uploadPath = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR .
+            Configuration::UPLOAD_DIR . basename($this->profile_picture);
+        if (!is_file($uploadPath)) {
             return '/images/default_pfp.png';
         }
 
