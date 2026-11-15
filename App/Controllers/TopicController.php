@@ -14,7 +14,7 @@ class TopicController extends BaseController
 {
     public function authorize(Request $request, string $action): bool
     {
-        return $action === 'my_topics' || $this->user->isLoggedIn();
+        return $action === 'mytopics' || $this->user->isLoggedIn();
     }
 
     /**
@@ -63,12 +63,12 @@ class TopicController extends BaseController
     {
         $identity = $this->user->getIdentity();
         if (!$request->isPost() || !$identity instanceof User || $identity->getId() === null) {
-            return $this->redirect($this->url('topic.my_topics'));
+            return $this->redirect($this->url('topic.mytopics'));
         }
 
         $topicId = trim((string)$request->value('id'));
         if (!ctype_digit($topicId)) {
-            return $this->redirect($this->url('topic.my_topics'));
+            return $this->redirect($this->url('topic.mytopics'));
         }
 
         $topic = Topic::getOne((int)$topicId);
@@ -76,10 +76,10 @@ class TopicController extends BaseController
             $topic->delete();
         }
 
-        return $this->redirect($this->url('topic.my_topics'));
+        return $this->redirect($this->url('topic.mytopics'));
     }
 
-    public function my_topics(Request $request): Response
+    public function mytopics(Request $request): Response
     {
         $identity = $this->user->getIdentity();
         if (!$identity instanceof User || $identity->getId() === null) {
@@ -109,7 +109,7 @@ class TopicController extends BaseController
 
         $topic = Topic::getOne((int)$topicId);
         if ($topic === null || $topic->getUserId() !== $identity->getId()) {
-            return $this->redirect($this->url('topic.my_topics'));
+            return $this->redirect($this->url('topic.mytopics'));
         }
 
         $categories = Category::getAll(orderBy: '`name` ASC');
@@ -131,7 +131,7 @@ class TopicController extends BaseController
                 $topic->setCategoryId($categoryId === '' ? null : (int)$categoryId);
                 $topic->save();
 
-                return $this->redirect($this->url('topic.my_topics'));
+                return $this->redirect($this->url('topic.mytopics'));
             }
         }
 

@@ -10,7 +10,7 @@
         <h1>Discussions</h1>
         <?php if ($user->isLoggedIn()) { ?>
             <div class="discussion-actions">
-                <a class="btn btn-secondary" href="<?= $link->url('topic.my_topics') ?>">My topics</a>
+                <a class="btn btn-secondary" href="<?= $link->url('topic.mytopics') ?>">My topics</a>
                 <a class="btn btn-primary" href="<?= $link->url('topic.create') ?>">Create new topic</a>
             </div>
         <?php } ?>
