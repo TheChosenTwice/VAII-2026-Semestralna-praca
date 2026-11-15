@@ -11,7 +11,6 @@ use Framework\Http\UploadedFile;
 
 class UserController extends BaseController
 {
-
     /**
      * @inheritDoc
      */
@@ -72,7 +71,8 @@ class UserController extends BaseController
                 $message = 'Name must be between 1 and 100 characters.';
             } elseif (User::getCount('`login` = ? AND `id` <> ?', [$username, $identity->getId()]) > 0) {
                 $message = 'This name is already taken.';
-            } elseif (($newPassword !== '' || $confirmPassword !== '' || $currentPassword !== '')
+            } elseif (
+                ($newPassword !== '' || $confirmPassword !== '' || $currentPassword !== '')
                 && ($currentPassword === '' || $newPassword === '' || $confirmPassword === '')
             ) {
                 $message = 'Enter your current password, a new password, and its confirmation.';
@@ -103,8 +103,11 @@ class UserController extends BaseController
 
                 if ($message === null) {
                     $identity->save();
-                    if ($newProfilePicture !== null && $oldProfilePicture !== null &&
-                        $oldProfilePicture !== 'default_pfp.png') {
+                    if (
+                        $newProfilePicture !== null
+                        && $oldProfilePicture !== null
+                        && $oldProfilePicture !== 'default_pfp.png'
+                    ) {
                         $this->deleteProfilePicture($oldProfilePicture);
                     }
                     return $this->redirect($this->url('home.index'));

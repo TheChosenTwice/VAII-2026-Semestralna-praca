@@ -79,6 +79,9 @@ class TopicController extends BaseController
         return $this->redirect($this->url('topic.my_topics'));
     }
 
+    /**
+     * @phpcsSuppress PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+     */
     public function my_topics(Request $request): Response
     {
         $identity = $this->user->getIdentity();
