@@ -73,3 +73,6 @@ Webová stránka bude umožňovať prezeranie diskusií, registráciu používat
 - Úprava používateľského profilu.
 - Zobrazovanie najnovších diskusií ako prvých.
 - Možnosť správcu spravovať používateľské účty.
+
+### Zdroje
+<a target="_blank" href="https://icons8.com/icon/NsCIoEt5vdsV/study-bunny">Study Bunny</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>

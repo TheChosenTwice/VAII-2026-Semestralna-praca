@@ -70,4 +70,16 @@ class AuthController extends BaseController
         $this->app->getAuthenticator()->logout();
         return $this->html();
     }
+
+    /**
+     * Displays the registration page.
+     *
+     * This action renders the registration view, allowing users to create a new account.
+     *
+     * @return ViewResponse The response object that renders the registration view.
+     */
+    public function register(Request $request): Response
+    {
+        return $this->html();
+    }
 }
