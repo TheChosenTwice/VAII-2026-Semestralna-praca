@@ -6,6 +6,26 @@
     width: 50px;
 }
 
+.logged-in-user {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.profile-picture-bubble {
+    border-radius: 50%;
+    display: inline-flex;
+    height: 34px;
+    overflow: hidden;
+    width: 34px;
+}
+
+.profile-picture-bubble img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
 .discussions-page { color: #172033; font: 14px Arial, sans-serif; width: 100%; margin: -4px auto 0; }
 .discussions-page h1 { margin: 0; font-size: 24px; }
 .page-description { color: #596579; font-size: 16px; margin: 11px 0 16px; }

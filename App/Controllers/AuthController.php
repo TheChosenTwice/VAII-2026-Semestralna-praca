@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Configuration;
+use App\Models\User;
 use Exception;
 use Framework\Core\BaseController;
 use Framework\Http\Request;
@@ -36,7 +37,7 @@ class AuthController extends BaseController
      * Authenticates a user and processes the login request.
      *
      * This action handles user login attempts. If the login form is submitted, it attempts to authenticate the user
-     * with the provided credentials. Upon successful login, the user is redirected to the admin dashboard.
+     * with the provided credentials. Upon successful login, the user is redirected to the home page.
      * If authentication fails, an error message is displayed on the login page.
      *
      * @return Response The response object which can either redirect on success or render the login view with
@@ -49,7 +50,7 @@ class AuthController extends BaseController
         if ($request->hasValue('submit')) {
             $logged = $this->app->getAuthenticator()->login($request->value('username'), $request->value('password'));
             if ($logged) {
-                return $this->redirect($this->url("admin.index"));
+                return $this->redirect($this->url("home.index"));
             }
         }
 
@@ -80,6 +81,32 @@ class AuthController extends BaseController
      */
     public function register(Request $request): Response
     {
-        return $this->html();
+        $message = null;
+        $username = trim((string)$request->value('username'));
+
+        if ($request->hasValue('submit')) {
+            $password = (string)$request->value('password');
+            $confirmPassword = (string)$request->value('confirm_password');
+
+            if ($username === '' || strlen($username) > 100) {
+                $message = 'Username must be between 1 and 100 characters.';
+            } elseif (User::getCount('`login` = ?', [$username]) > 0) {
+                $message = 'This username is already taken.';
+            } elseif (strlen($password) < 6) {
+                $message = 'Password must be at least 6 characters long.';
+            } elseif ($password !== $confirmPassword) {
+                $message = 'Passwords do not match.';
+            } else {
+                $user = new User();
+                $user->setLogin($username);
+                $user->setPassword($password);
+                $user->save();
+
+                $this->app->getAuthenticator()->login($request->value('username'), $request->value('password'));
+                return $this->redirect($this->url("home.index"));
+            }
+        }
+
+        return $this->html(compact('message', 'username'));
     }
 }

@@ -34,8 +34,17 @@
             </li>
         </ul>
         <?php if ($user->isLoggedIn()) { ?>
-            <span class="navbar-text">Logged in user: <b><?= e($user->getName()) ?></b></span>
+            <span class="navbar-text logged-in-user">
+                <a class="profile-picture-bubble" href="<?= $link->url('user.index') ?>">
+                    <img src="<?= $link->asset($user->getProfilePicture()) ?>"
+                         alt="<?= e($user->getName()) ?>'s profile picture">
+                </a>
+                <span>Logged in user: <b><?= e($user->getName()) ?></b></span>
+            </span>
             <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $link->url('user.edit') ?>">Edit profile</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= $link->url('auth.logout') ?>">Log out</a>
                 </li>
